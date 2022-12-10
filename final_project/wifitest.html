@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>LED 전원 ON/OFF</title>
+</head>
+
+<body>
+
+    <h>TIP) LED 조작이 안 되는 경우 충분한 시간을 가지고 기다리세요.</h></br></br>
+    <button id="13" class="led"><img src="bt.png" alt="">LED PIN 13</button>
+
+    <script src="wifitest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".led").click(function () {
+                var p = $(this).attr('id');
+                $.get("http://172.20.10.6/", { pin: p });
+            });
+        });
+    </script>
+</body>
+
+</html>

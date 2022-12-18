@@ -11,7 +11,7 @@ void setup() {
   digitalWrite(13, LOW);
 
   Serial.write("잠시만 기다려주세요... (와이파이 연결중)\n");  
-  sendData("AT+CWJAP=\"Sinho\",\"123456780\"\r\n",10000,DEBUG);  //와이파이 찾아서 연결
+  sendData("AT+CWJAP=\"Dj13pro\",\"15784095\"\r\n",10000,DEBUG);  //와이파이 찾아서 연결
   Serial.write("남은 설정이 있습니다...\n");
   delay(10000);
   sendData("AT+CIFSR\r\n",1000,DEBUG);          // 아두이노가 켜지면 ESP8266에 할당된 IP 주소를 받아옵니다.
